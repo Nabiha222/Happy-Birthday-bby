@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- First Card -->
+    <div class="card" id="intro">
+        <h1>I Have Something Special For You 💌</h1>
+
+        <p>
+            Someone very special deserves something sweet today...
+            <br><br>
+            Click the button below. 🎁
+        </p>
+
+        <button onclick="showGift()">Open Surprise ❤️</button>
+    </div>
+
+    <!-- Birthday -->
+    <div class="birthday" id="birthday">
+
+        <div class="cake">
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="top"></div>
+
+            <div class="middle"></div>
+
+            <div class="bottom"></div>
+
+        </div>
+
+        <h1>🎉 Happy Birthday To You Bby ❤️</h1>
+
+        <p class="message">
+            May your smile never fade,
+            your dreams always grow,
+            and every year bring you more happiness than the last.
+            <br><br>
+            You deserve all the love in this world. 💖
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+function showGift(){
+    document.getElementById("intro").style.display="none";
+    document.getElementById("birthday").style.display="flex";
+}
+</script>
+
+</body>
+</html>
