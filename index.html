@@ -3,61 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Birthday Surprise</title>
+<title>A Little Birthday Letter 🤍</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="bg-hearts"></div>
 
-    <!-- First Card -->
-    <div class="card" id="intro">
+<main class="container">
+
+    <!-- PAGE 1 -->
+    <section class="card page active" id="intro">
+        <div class="tiny-heart">♡</div>
+        <p class="eyebrow">A little something for you</p>
         <h1>I Have Something Special For You 💌</h1>
-
-        <p>
+        <p class="intro-text">
             Someone very special deserves something sweet today...
             <br><br>
-            Click the button below. 🎁
+            Take your time. There is a little surprise waiting for you. 🎁
         </p>
+        <button onclick="showPage('birthday')">Open Surprise ❤️</button>
+    </section>
 
-        <button onclick="showGift()">Open Surprise ❤️</button>
-    </div>
-
-    <!-- Birthday -->
-    <div class="birthday" id="birthday">
-
-        <div class="cake">
-
-            <div class="candle">
-                <div class="flame"></div>
+    <!-- PAGE 2 -->
+    <section class="page birthday" id="birthday">
+        <div class="cake-wrap">
+            <div class="cake">
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="top"></div>
+                <div class="middle"></div>
+                <div class="bottom"></div>
             </div>
-
-            <div class="top"></div>
-
-            <div class="middle"></div>
-
-            <div class="bottom"></div>
-
         </div>
 
-        <h1>🎉 Happy Birthday To You Bby ❤️</h1>
-
+        <p class="eyebrow light">Today is your day</p>
+        <h1>Happy Birthday, Bby 🎂</h1>
         <p class="message">
-            May your smile never fade,
-            your dreams always grow,
-            and every year bring you more happiness than the last.
+            May your smile never fade,<br>
+            your dreams always grow,<br>
+            and life bring you more peace, happiness and success.
             <br><br>
-            You deserve all the love in this world. 💖
+            You deserve beautiful things. 🤍
         </p>
 
-    </div>
+        <button class="ghost-btn" onclick="showPage('letter')">
+            One Last Thing… 💌
+        </button>
+    </section>
 
-</div>
+    <!-- PAGE 3 -->
+    <section class="page letter-page" id="letter">
+        <div class="letter-card">
+            <p class="eyebrow">A letter I never got to say</p>
+            <h1>One Last Thing… 🤍</h1>
+
+            <div class="letter">
+                <p>I don't know if you'll ever read these words, but there is something I want you to know.</p>
+
+                <p><strong>I understood you.</strong></p>
+
+                <p>
+                    I understood what you were trying to tell me.
+                    I understood why you had to leave, and I understood
+                    that you weren't leaving because you stopped caring.
+                    You simply didn't want me to keep waiting for something
+                    you couldn't promise.
+                </p>
+
+                <p>
+                    You asked me to focus on my own life, and I'm trying to
+                    keep your words. I'm studying. I'm working on myself.
+                    I'm slowly learning how to spend my time without waiting for you.
+                </p>
+
+                <p>
+                    But none of that changes what you meant to me.
+                </p>
+
+                <p class="highlight">
+                    I loved you. I still do. And perhaps a part of me always will.
+                </p>
+
+                <p>
+                    Not because I'm waiting for you, and not because I expect
+                    you to come back. But because some people become a beautiful
+                    part of your life simply by existing in it.
+                </p>
+
+                <p class="center-quote">You were that person for me.</p>
+
+                <p>
+                    Thank you for every hour in VC, every little conversation,
+                    every moment you stayed, every time you listened, every
+                    little thing you remembered, and every moment you made me
+                    feel valued.
+                </p>
+
+                <p>
+                    You taught me what it feels like to be cared for,
+                    understood and respected.
+                </p>
+
+                <p>
+                    And you taught me something even more important:
+                    loving someone doesn't always mean holding onto them.
+                    Sometimes, loving someone means understanding them enough
+                    to let them go.
+                </p>
+
+                <p>
+                    So I'm going to try.
+                    I'm going to keep your words.
+                    I'm going to focus on my studies, my dreams, my life,
+                    and the person I'm becoming.
+                </p>
+
+                <p>
+                    I may not know what the future holds, and I won't pretend
+                    that I do. But I know one thing for certain:
+                    <strong>I'm grateful our paths crossed.</strong>
+                </p>
+
+                <p>
+                    Maybe we weren't meant to have a forever together.
+                    Maybe we were only meant to have a beautiful chapter.
+                </p>
+
+                <p class="highlight">
+                    And honestly… I'm grateful for that chapter.
+                </p>
+
+                <p>
+                    I hope you take care of yourself, wherever life takes you.
+                    I hope your work becomes lighter, your dreams become real,
+                    and you find peace in the life you're building.
+                </p>
+
+                <p class="final-line">
+                    I won't wait for you anymore.<br>
+                    But I'll always wish you well. 🤍
+                </p>
+
+                <p class="signature">— From someone who will always be grateful</p>
+            </div>
+
+            <button class="back-btn" onclick="showPage('birthday')">← Back to birthday</button>
+        </div>
+    </section>
+
+</main>
 
 <script>
-function showGift(){
-    document.getElementById("intro").style.display="none";
-    document.getElementById("birthday").style.display="flex";
+function showPage(id) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    const target = document.getElementById(id);
+    target.classList.add('active');
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 </script>
 
